@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('https://img1.baidu.com/it/u=2305239431,520511897&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500');
+            background-size: cover;
+            background-repeat: repeat;
+        }
+
+        .boxs {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .box {
+            flex: 1;
+        }
+
+        .box:nth-child(1) {
+            display: flex;
+            align-items: center;
+        }
+
+        .box:nth-child(1):hover {
+            animation: lefts 3s linear;
+        }
+
+        @keyframes lefts {
+            0% {
+                transform: translateX(-100px);
+            }
+
+            90% {
+                transform: translateX(-400px);
+            }
+
+            100% {
+                visibility: hidden;
+            }
+        }
+
+        .box:nth-child(1):after {
+            content: "";
+            width: 25%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            opacity: 0.6;
+            background-color: #fff;
+        }
+
+        .login {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 20vw;
+            height: 30vh;
+            background-color: #fff;
+        }
+
+        .login input {
+            width: 80%;
+            height: 35px;
+            border: none;
+            border-bottom: 2px solid skyblue;
+            outline: none;
+            text-indent: 0.5rem;
+            caret-color: aqua;
+            background: none;
+            color: aqua;
+        }
+
+        input::placeholder {
+            color: skyblue;
+        }
+
+        .login button {
+            width: 40%;
+            height: 10%;
+            margin-top: 20px;
+            border: none;
+            color: #fff;
+            background-color: skyblue;
+        }
+
+        .xia {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+
+        .xia div {
+            width: 25%;
+            height: 10px;
+            text-align: center;
+            font-size: 13px;
+            color: deepskyblue;
+            margin-top: 5px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxs">
+        <div class="box">
+            <div class="login">
+                <input type="text" placeholder="请输入用户名...">
+                <input type="password" placeholder="请输入密码...">
+                <div class="xia">
+                    <div>点击注册</div>
+                    <div>忘记密码</div>
+                </div>
+                <button>登录</button>
+            </div>
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
